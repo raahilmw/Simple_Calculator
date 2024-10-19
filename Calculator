@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Love Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+        }
+        .container {
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h2 {
+            color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Love Calculator</h1>
+        <p>Type "1 + 1" below:</p>
+        <input type="text" id="equation" placeholder="Enter equation">
+        <br>
+        <button onclick="checkEquation()">Calculate</button>
+        <h2 id="result"></h2>
+    </div>
+
+    <script>
+        function checkEquation() {
+            var equation = document.getElementById('equation').value;
+            if (equation === '1 + 1') {
+                var messages = ['I love u', 'I miss u'];
+                var randomMessage = messages[Math.floor(Math.random() * messages.length)];
+                document.getElementById('result').innerText = randomMessage;
+            } else {
+                document.getElementById('result').innerText = 'Try again!';
+            }
+        }
+    </script>
+</body>
+</html>
